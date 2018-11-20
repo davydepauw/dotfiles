@@ -79,6 +79,9 @@
 		fi \
 	}; f"
 
+    # Pretty please
+    please = push --force-with-lease
+
 [apply]
 
 	# Detect whitespace errors when applying a patch
@@ -157,10 +160,12 @@
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
 
+	conflictstyle = diff3
+
 [push]
 
 	# https://git-scm.com/docs/git-config#git-config-pushdefault
-	default = simple
+	default = current
 	# Make `git push` push relevant annotated tags when pushing branches out.
 	followTags = true
 
